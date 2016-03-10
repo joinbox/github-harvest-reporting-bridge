@@ -1,0 +1,28 @@
+(function() {
+    'use strict';
+
+
+    module.exports = {
+        authentication: {
+            github: {
+                token: ''
+            }
+            , harvest: {
+                  email: '@joinbox.com'
+                , domain: 'joinbox'
+                , password: ''
+            }
+        }
+        , harvest: {
+              projectId: 8931740
+            , from: '20140101'
+            , to: '20180101'
+        }
+        , github: {
+              user: 'joinbox'
+            , repository: 'eventbooster-offer'
+            , timeRegex: /\[\s*([0-9\.]+)\s*\]\s*$/gi  // [1] must return the time
+            , timeMultiplier: 8 // need hours
+        }
+    };
+})();
